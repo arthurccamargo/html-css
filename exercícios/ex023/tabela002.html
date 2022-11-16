@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Grande</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: gray;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead {
+            background-color: gray;
+            color: white;
+        }
+
+        /*usei a pseudoclasse nth-child para mexer em todos elemetos pares (even) da lista */
+        tbody > tr:nth-child(even) { /* even(par), odd(impar), 2n(par), 2n-1(impar)*/
+            background-color: lightgray;
+        }
+        
+        tfoot {
+            background-color: gray;
+            color: white;
+        }
+
+        td.num {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        Amatomia Para Tabelas Grandes
+        TABLE
+             Caption
+             THEAD
+                TR, TD, TH
+             TBODY
+                TR, TD, TH
+             TFOOT
+                TR, TD, TH
+    -->
+     <table>
+        <caption>Populacao das Unidades Federativas</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th> <!--scope col indica que Estado é um titulo de uma coluna-->
+                <th scope="col" style="width: 100px";>Populacao<th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th scope="row">Total de Habitantes</th> <!--scope col indica que Total de Habitantes é um titulo de uma linha-->
+                <td class="num"><strong>84 352 783</strong></td>
+            </tr>
+        </tfoot> <!--msm colocando aqui o foot o computador entende que o foot é o ultimo, isso mostra a importancia da semantica-->
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21 168 791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17 264 943</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45 919 049</td>
+            </tr>
+          
+        </tbody>
+     </table>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas a consequatur dignissimos iste accusamus nemo, non quae ullam sunt optio, aperiam numquam exercitationem beatae dolorum inventore quia minus earum incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti, doloremque in, fugit officiis pariatur voluptatem blanditiis, maxime temporibus eos incidunt enim autem nesciunt? Autem sunt quia et explicabo dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium ex earum tempore blanditiis vitae itaque corporis? A, amet ut nemo, necessitatibus neque cum perspiciatis ducimus veritatis, molestiae aliquam quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas quae corrupti error veniam beatae ab, asperiores tempora accusantium blanditiis. Consectetur eos voluptas mollitia, excepturi quis quam ex accusantium unde?</p>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas a consequatur dignissimos iste accusamus nemo, non quae ullam sunt optio, aperiam numquam exercitationem beatae dolorum inventore quia minus earum incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti, doloremque in, fugit officiis pariatur voluptatem blanditiis, maxime temporibus eos incidunt enim autem nesciunt? Autem sunt quia et explicabo dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium ex earum tempore blanditiis vitae itaque corporis? A, amet ut nemo, necessitatibus neque cum perspiciatis ducimus veritatis, molestiae aliquam quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas quae corrupti error veniam beatae ab, asperiores tempora accusantium blanditiis. Consectetur eos voluptas mollitia, excepturi quis quam ex accusantium unde?</p>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas a consequatur dignissimos iste accusamus nemo, non quae ullam sunt optio, aperiam numquam exercitationem beatae dolorum inventore quia minus earum incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti, doloremque in, fugit officiis pariatur voluptatem blanditiis, maxime temporibus eos incidunt enim autem nesciunt? Autem sunt quia et explicabo dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium ex earum tempore blanditiis vitae itaque corporis? A, amet ut nemo, necessitatibus neque cum perspiciatis ducimus veritatis, molestiae aliquam quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas quae corrupti error veniam beatae ab, asperiores tempora accusantium blanditiis. Consectetur eos voluptas mollitia, excepturi quis quam ex accusantium unde?</p>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas a consequatur dignissimos iste accusamus nemo, non quae ullam sunt optio, aperiam numquam exercitationem beatae dolorum inventore quia minus earum incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti, doloremque in, fugit officiis pariatur voluptatem blanditiis, maxime temporibus eos incidunt enim autem nesciunt? Autem sunt quia et explicabo dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium ex earum tempore blanditiis vitae itaque corporis? A, amet ut nemo, necessitatibus neque cum perspiciatis ducimus veritatis, molestiae aliquam quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas quae corrupti error veniam beatae ab, asperiores tempora accusantium blanditiis. Consectetur eos voluptas mollitia, excepturi quis quam ex accusantium unde?</p>
+     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas a consequatur dignissimos iste accusamus nemo, non quae ullam sunt optio, aperiam numquam exercitationem beatae dolorum inventore quia minus earum incidunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti, doloremque in, fugit officiis pariatur voluptatem blanditiis, maxime temporibus eos incidunt enim autem nesciunt? Autem sunt quia et explicabo dicta? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores accusantium ex earum tempore blanditiis vitae itaque corporis? A, amet ut nemo, necessitatibus neque cum perspiciatis ducimus veritatis, molestiae aliquam quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo voluptas quae corrupti error veniam beatae ab, asperiores tempora accusantium blanditiis. Consectetur eos voluptas mollitia, excepturi quis quam ex accusantium unde?</p>
+    <!--estado e populacao para de descer quando a tabela acaba--> 
+</body>
+</html>
